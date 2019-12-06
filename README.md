@@ -47,7 +47,14 @@ To use this module, add the following call to your code:
 module "<layer>-iam-instance-profile-<AccountID>" {
   source = "git::https://github.com/nitinda/terraform-module-aws-iam-instance-profile.git?ref=terraform-11/master"
 
+  providers = {
+    "aws"  = "aws.services"
+  }
 
+  ## IAM Role
+  name = "iam-instance-profile-ec2"
+  path = "/service-role/"
+  role = "${var.iam_role_name}"
 }
 ```
 
