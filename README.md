@@ -27,10 +27,6 @@ From branch : **_terraform-11/master_**
 
 * **_IAM Instance Profile (Terraform 11 supported code)_**
 
-From branch : **_terraform-12/master_** *work in progress*
-
-* **_IAM Instance Profile (Terraform 12 supported code - work in progres)_**
-
 
 ---
 
@@ -49,11 +45,13 @@ To use this module, add the following call to your code:
 
 ```tf
 module "<layer>-iam-instance-profile-<AccountID>" {
-  source = "git::https://github.com/nitinda/terraform-module-aws-iam-instance-profile.git?ref=master"
+  source = "git::https://github.com/nitinda/terraform-module-aws-iam-instance-profile.git?ref=terraform-11/master"
 
 
 }
 ```
+
+
 ---
 
 ## Inputs
@@ -61,12 +59,13 @@ module "<layer>-iam-instance-profile-<AccountID>" {
 The variables required in order for the module to be successfully called from the deployment repository are the following:
 
 
-|         **_Variable_**          |        **_Description_**            |   **_Type_**   |
-|---------------------------------|-------------------------------------|----------------|
+|         **_Variable_**          |           **_Description_**             |   **_Type_**   |
+|---------------------------------|-----------------------------------------|----------------|
+| name                            | The profile's name                      | string         |
+| role                            | Path in which to create the profile     | string         |
+| path                            | The role name to include in the profile | string         |
 
 
-
-Details are in respective branch.
 
 
 ## Outputs
