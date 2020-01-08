@@ -43,9 +43,16 @@ To use this module, add the following call to your code:
 
 ```tf
 module "iam_instance_profile" {
-  source = "git::https://github.com/nitinda/terraform-module-aws-iam-instance-profile.git?ref=master"
+  source = "git::https://github.com/nitinda/terraform-module-aws-iam-instance-profile.git?ref=terraform-12/master"
 
+  providers = {
+    aws = aws.services
+  }
 
+  ## IAM Role
+  name = "iam-instance-profile-ec2"
+  path = "/service-role/"
+  role = var.iam_role_name
 }
 ```
 ---
