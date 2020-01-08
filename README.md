@@ -12,7 +12,7 @@ This module may be used to create **_IAM Instance Profile_** resources in AWS cl
 
 ## Prerequisites
 
-This module needs **_Terraform 0.11.14_** or newer.
+This module needs **_Terraform 0.12.18_** or newer.
 You can download the latest Terraform version from [here](https://www.terraform.io/downloads.html).
 
 This module deploys aws services details are in respective feature branches.
@@ -23,13 +23,7 @@ This module deploys aws services details are in respective feature branches.
 
 Below we are able to check the resources that are being created as part of this module call:
 
-From branch : **_terraform-11/master_**
-
-* **_IAM Instance Profile (Terraform 11 supported code)_**
-
-From branch : **_terraform-12/master_** *work in progress*
-
-* **_IAM Instance Profile (Terraform 12 supported code - work in progres)_**
+* **_IAM Instance Profile_**
 
 
 ---
