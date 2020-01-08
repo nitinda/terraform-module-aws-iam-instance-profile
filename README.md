@@ -57,9 +57,11 @@ The variables required in order for the module to be successfully called from th
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|-----:|
+| **_name_** | The profile's name | _string_ | **_Required_** | 
+| **_path_** | Path in which to create the profile | _string_ | **_Optional_** | 
+| **_role_** | The role name to include in the profile | _string_ | **_Required_** | 
 
 
-Details are in respective branch.
 
 
 ## Outputs

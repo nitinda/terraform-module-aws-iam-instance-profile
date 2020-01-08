@@ -4,6 +4,7 @@ variable "name" {
 
 variable "path" {
   description = "Path in which to create the profile."
+  default     = "/"
 }
 
 variable "role" {
