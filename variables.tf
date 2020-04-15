@@ -1,5 +1,11 @@
 variable "name" {
   description = "The profile's name"
+  default     = null
+}
+
+variable "name_prefix" {
+  description = "Creates a unique name beginning with the specified prefix"
+  default     = null
 }
 
 variable "path" {
@@ -9,4 +15,5 @@ variable "path" {
 
 variable "role" {
   description = "The role name to include in the profile."
+  default     = null
 }
