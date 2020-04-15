@@ -12,7 +12,7 @@ This module may be used to create **_IAM Instance Profile_** resources in AWS cl
 
 ## Prerequisites
 
-This module needs **_Terraform 0.11.14_** or newer.
+This module needs **_Terraform 0.12.18_** or newer.
 You can download the latest Terraform version from [here](https://www.terraform.io/downloads.html).
 
 This module deploys aws services details are in respective feature branches.
@@ -23,13 +23,7 @@ This module deploys aws services details are in respective feature branches.
 
 Below we are able to check the resources that are being created as part of this module call:
 
-From branch : **_terraform-11/master_**
-
-* **_IAM Instance Profile (Terraform 11 supported code)_**
-
-From branch : **_terraform-12/master_** *work in progress*
-
-* **_IAM Instance Profile (Terraform 12 supported code - work in progres)_**
+* **_IAM Instance Profile_**
 
 
 ---
@@ -49,9 +43,16 @@ To use this module, add the following call to your code:
 
 ```tf
 module "iam_instance_profile" {
-  source = "git::https://github.com/nitinda/terraform-module-aws-iam-instance-profile.git?ref=master"
+  source = "git::https://github.com/nitinda/terraform-module-aws-iam-instance-profile.git?ref=terraform-12/master"
 
+  providers = {
+    aws = aws.services
+  }
 
+  ## IAM Role
+  name = "iam-instance-profile-ec2"
+  path = "/service-role/"
+  role = var.iam_role_name
 }
 ```
 ---
@@ -63,9 +64,11 @@ The variables required in order for the module to be successfully called from th
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|-----:|
+| **_name_** | The profile's name | _string_ | **_Required_** | 
+| **_path_** | Path in which to create the profile | _string_ | **_Optional_** | 
+| **_role_** | The role name to include in the profile | _string_ | **_Required_** | 
 
 
-Details are in respective branch.
 
 
 ## Outputs
