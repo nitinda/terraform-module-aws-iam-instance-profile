@@ -9,3 +9,7 @@ output "arn" {
 output "name" {
   value = aws_iam_instance_profile.iam_instance_profile.name
 }
+
+output "role" {
+  value = aws_iam_instance_profile.iam_instance_profile.role
+}
